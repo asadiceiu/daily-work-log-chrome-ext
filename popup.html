@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Work Log</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <button id="prevDay" class="nav-btn" aria-label="Previous day">&#8592;</button>
+      <div class="date-wrap">
+        <p id="dateLabel" class="date-label"></p>
+        <p id="dateHint" class="date-hint"></p>
+      </div>
+      <button id="nextDay" class="nav-btn" aria-label="Next day">&#8594;</button>
+    </header>
+
+    <form id="taskForm" class="task-form">
+      <input
+        id="taskInput"
+        type="text"
+        placeholder="What are you working on?"
+        autocomplete="true"
+        spellcheck="true"
+        maxlength="180"
+      >
+      <button type="submit" class="add-btn" aria-label="Add task">+</button>
+    </form>
+
+    <section class="list-wrap">
+      <div id="taskList" class="task-list" aria-live="polite"></div>
+      <p id="emptyState" class="empty-state">No tasks yet for this day.</p>
+    </section>
+
+    <footer class="bottom-actions">
+      <button id="toggleViewBtn" type="button" class="bottom-btn secondary-btn">Week View</button>
+      <button id="openFullAppBtn" type="button" class="bottom-btn tertiary-btn">Full App</button>
+      <button id="exportCsvBtn" type="button" class="bottom-btn">Export Logs</button>
+    </footer>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

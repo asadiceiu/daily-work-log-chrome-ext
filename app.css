@@ -1,0 +1,126 @@
+:root {
+  --page-shell-width: 960px;
+  --actions-layer-height: 80px;
+}
+
+body.fullpage-body {
+  width: auto;
+  height: auto;
+  min-height: 100vh;
+  max-height: none;
+  margin: 0;
+  overflow: auto;
+  border-radius: 0;
+  padding: 30px 18px;
+}
+
+.fullpage-shell {
+  width: min(var(--page-shell-width), 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+.workspace-header {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid #dce5f6;
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 12px 30px rgba(24, 36, 63, 0.08);
+}
+
+.workspace-eyebrow {
+  margin: 0 0 4px;
+  color: #1f6ec4;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.workspace-title {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.1;
+  color: #18243f;
+}
+
+.workspace-subtitle {
+  margin: 8px 0 0;
+  color: #4f6186;
+  font-size: 14px;
+}
+
+.app.app-fullpage {
+  width: 100%;
+  min-height: clamp(560px, 78vh, 760px);
+  max-height: none;
+  border: 1px solid #dce5f6;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 44px rgba(24, 36, 63, 0.12);
+  overflow: hidden;
+  padding: 16px;
+}
+
+.app.app-fullpage .topbar {
+  margin-bottom: 14px;
+}
+
+.app.app-fullpage .nav-btn {
+  width: 44px;
+  height: 36px;
+  font-size: 18px;
+}
+
+.app.app-fullpage .task-form {
+  margin-bottom: 12px;
+}
+
+.app.app-fullpage #taskInput {
+  font-size: 15px;
+  padding: 11px 14px;
+}
+
+.app.app-fullpage .task-list {
+  padding-bottom: var(--actions-layer-height);
+  padding-right: 4px;
+}
+
+.app.app-fullpage .bottom-actions {
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.app.app-fullpage .bottom-btn {
+  font-size: 14px;
+  padding: 10px 12px;
+}
+
+@media (max-width: 760px) {
+  body.fullpage-body {
+    padding: 16px 12px;
+  }
+
+  .workspace-title {
+    font-size: 26px;
+  }
+
+  .workspace-subtitle {
+    font-size: 13px;
+  }
+
+  .app.app-fullpage {
+    min-height: calc(100vh - 176px);
+    border-radius: 18px;
+    padding: 12px;
+  }
+
+  .app.app-fullpage .bottom-actions {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+}
