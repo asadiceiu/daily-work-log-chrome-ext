@@ -21,7 +21,7 @@ A minimal Chrome extension that lets you:
 1. Open `chrome://extensions`.
 2. Enable **Developer mode** (top-right).
 3. Click **Load unpacked**.
-4. Select this folder: `/Users/aasa0007/Python/ChromeExt/daily-work-log`.
+4. Select this folder containing daily-work-log: `/daily-work-log`.
 5. Pin the extension and click its icon to open the task logger.
 6. Use **Full App** in the popup to open the full-page workspace.
 
